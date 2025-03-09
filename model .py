@@ -27,7 +27,7 @@ def detect_animals(video_path):
             for box in result.boxes:
                 cls = int(box.cls[0])
                 label = model.names[cls]
-                if label in ['tiger', 'elephant', 'horse']:  # Add more animal classes if needed
+                if label in ['tiger', 'elephant', 'rhino']:  # Add more animal classes if needed
                     x1, y1, x2, y2 = map(int, box.xyxy[0])
                     conf = box.conf[0].item()
                     
